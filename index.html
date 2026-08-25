@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple GitHub Workflow</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #f0f6fc;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #8b949e;
+      margin-bottom: 50px;
+    }
+
+    .workflow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .step {
+      width: 180px;
+      min-height: 150px;
+      padding: 25px 15px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+      border-color: #58a6ff;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .step h2 {
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+
+    .step p {
+      font-size: 13px;
+      color: #8b949e;
+      margin: 0;
+    }
+
+    .arrow {
+      font-size: 30px;
+      color: #58a6ff;
+    }
+
+    .github {
+      border-color: #8b5cf6;
+    }
+
+    .actions {
+      border-color: #2ea043;
+    }
+
+    .deploy {
+      border-color: #f0883e;
+    }
+
+    .code {
+      margin-top: 50px;
+      padding: 20px;
+      background: #010409;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      text-align: left;
+      overflow-x: auto;
+    }
+
+    pre {
+      margin: 0;
+      color: #79c0ff;
+      font-family: monospace;
+    }
+
+    @media (max-width: 700px) {
+      .arrow {
+        transform: rotate(90deg);
+      }
+
+      .workflow {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🚀 Simple GitHub Workflow</h1>
+    <p class="subtitle">
+      From writing code to automatically deploying your application
+    </p>
+
+    <div class="workflow">
+
+      <div class="step">
+        <div class="icon">💻</div>
+        <h2>Write Code</h2>
+        <p>Developer writes and updates the project.</p>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="step github">
+        <div class="icon">🐙</div>
+        <h2>GitHub</h2>
+        <p>Code is pushed to a GitHub repository.</p>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="step actions">
+        <div class="icon">⚙️</div>
+        <h2>GitHub Actions</h2>
+        <p>Workflow automatically runs tests and builds.</p>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="step deploy">
+        <div class="icon">🌐</div>
+        <h2>Deploy</h2>
+        <p>Application is deployed to a server.</p>
+      </div>
+
+    </div>
+
+    <div class="code">
+      <pre>
+git add .
+git commit -m "Update application"
+git push origin main
+
+        ↓
+
+GitHub Actions
+        ↓
+Build → Test → Deploy
+      </pre>
+    </div>
+
+  </div>
+
+</body>
+</html>
